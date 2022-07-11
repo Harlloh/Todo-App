@@ -1,0 +1,219 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.completedClass {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+h1 {
+  color: white;
+}
+h6 {
+  color: rgb(192, 192, 192);
+}
+main {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+header {
+  background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.515),
+      rgba(0, 0, 0, 0.915)
+    ),
+    url(/images/photo-16216407860.jpg);
+  background-size: cover;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  background-position: center center;
+}
+.container {
+  background-color: rebeccapurple;
+  height: 80vh;
+  width: 35%;
+  z-index: 1;
+  display: none;
+  margin: 0 auto;
+  color: white;
+  top: 15%;
+  left: 25%;
+  flex-direction: column;
+  position: fixed;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px rgb(82, 81, 81);
+  text-align: center;
+}
+.todo .li .completed-button {
+  position: relative;
+  right: 0px;
+}
+
+.todo {
+  margin: 30rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 2px 7px rgb(189, 189, 189);
+  width: 75%;
+  border-radius: 5px;
+  margin: 7px;
+  transition: all 0.3s ease;
+}
+.todoItems {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding-left: 0.5rem;
+  transition: all 2s ease;
+}
+.todoIcons {
+  height: 100%;
+  display: flex;
+  /* width: 20%; */
+}
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+.completed-button,
+.finished-button {
+  background-color: rebeccapurple;
+  color: white;
+  font-size: 1rem;
+  padding: 2rem;
+  border: none;
+  margin-left: 0.2rem;
+  cursor: pointer;
+}
+.completed-button {
+  background-color: green;
+}
+.finished-button {
+  background-color: red;
+}
+.completed-button:hover {
+  background-color: rgb(3, 97, 3);
+}
+.finished-button:hover {
+  background-color: rgb(209, 3, 3);
+}
+form input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 3rem;
+  margin: 2rem 0;
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgb(114, 100, 100);
+  transition: all 0.2s;
+}
+::placeholder {
+  color: rgb(199, 199, 199);
+  opacity: 1;
+}
+input:focus {
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  color: black;
+  background-color: #fff;
+}
+.cancel {
+  position: absolute;
+  left: 5px;
+  width: 2rem;
+  height: 2rem;
+  color: rebeccapurple;
+  transition: 0.5s ease-in-out;
+  border: none;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: rebeccapurple;
+  border: none;
+  color: white;
+  box-shadow: 2px 2px 10px rgb(235, 235, 235);
+  cursor: pointer;
+}
+.submit {
+  width: 100%;
+  height: 7%;
+  background-color: rgb(37, 177, 233);
+  color: white;
+  border: none;
+  transition: 0.3s ease-in;
+}
+#todo {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  font-size: 70px;
+  /* height: 100px;
+  width: 100px; */
+  padding: 0.9rem 2rem;
+  display: flex;
+  text-align: center;
+  border: none;
+  background-color: rebeccapurple;
+  color: white;
+  border-radius: 100%;
+  box-shadow: 1px 1px 2px rgb(82, 81, 81);
+  cursor: pointer;
+  transition: all 0.3s;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.5);
+  }
+
+  50% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+.select {
+  margin: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  color: rebeccapurple;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: white;
+  padding: 1rem;
+  color: rebeccapurple;
+  pointer-events: none;
+  right: 0px;
+  top: 0px;
+}
